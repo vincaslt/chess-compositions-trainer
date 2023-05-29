@@ -10,7 +10,7 @@ const client = new Client()
 client.setEndpoint(APPWRITE_ENDPOINT).setProject(APPWRITE_PROJECT)
 
 export async function login(email: string, password: string) {
-  await fetch('/api/login', {
+  await fetch(process.env.NEXT_PUBLIC_API_URL! + '/login', {
     method: 'POST',
     body: JSON.stringify({ email, password }),
   })

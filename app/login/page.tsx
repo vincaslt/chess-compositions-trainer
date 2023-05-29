@@ -1,7 +1,6 @@
 'use client'
 
-import { getUserData, login, logout } from '@/app/_appwrite/client'
-import { useEffect } from 'react'
+import { login } from '@/app/_appwrite/client'
 import { useForm } from 'react-hook-form'
 
 export default function Login() {

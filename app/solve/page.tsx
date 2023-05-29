@@ -1,3 +1,12 @@
+import ProblemView from '@/app/solve/ProblemView'
+import { fetchNextProblem } from '@/app/solve/page-utils'
+
 export default async function Solve() {
-  return <main className="flex">Solve</main>
+  const initialProblem = await fetchNextProblem()
+
+  return (
+    <main className="flex">
+      <ProblemView initialProblem={initialProblem} />
+    </main>
+  )
 }

@@ -7,10 +7,6 @@ import {
 import { NextResponse } from 'next/server'
 import * as setCookie from 'set-cookie-parser'
 
-export function GET() {
-  return NextResponse.json({ res: 'ok' })
-}
-
 export async function POST(request: Request) {
   const { email, password }: { email: string; password: string } =
     await request.json()
